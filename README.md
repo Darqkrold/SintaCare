@@ -15,10 +15,6 @@ This system is a web-based application designed to manage patient records. It al
 - **Backend:** Flask 
 - **Database:** SQLite
 
-## Installation
-
-To run this application, you need Python installed on your system. If you don't have Python installed, download and install it from [python.org](https://www.python.org/downloads/).
-
 ### Step 1: Clone the Repository
 
 Clone the repository to your local machine:
