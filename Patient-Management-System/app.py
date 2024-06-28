@@ -3,12 +3,8 @@ import sqlite3
 import json 
 
 
-
 app = Flask(__name__) 
 app.secret_key = "secret123kjasjdkhkasd" 
-
-
-
 
 conn = sqlite3.connect('database.db')
 cursor = conn.cursor() 
@@ -21,12 +17,12 @@ sql = "CREATE TABLE IF NOT EXISTS PatientRecords (request_id INTEGER PRIMARY KEY
 
 cursor.execute(sql)
 
+
 # request_id  - generation if login 
 
 # REQUEST TABLE 
 
 # request_Id 
-
 
 
 @app.route("/")
