@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="h-screen w-full">
+      <nav class="w-full h-[15%] flex justify-between items-center">
+        <div class="flex items-center">
+          <img src="/static/clientLogo.png" alt="logo" srcset="" />
+          <h1 class="text-2xl font-semibold mx-2">
+            SintaCare: PUP Medical Records Tracker
+          </h1>
+        </div>
+
+        <div class="flex items-center">
+          <a href="/" class="ml-4">Home</a>
+          <a href="/records" class="ml-4" id="records">Records</a>
+
+          <a href="/logout" class="mx-20">
+            <button class="bg-black text-white px-4 py-2 rounded">
+              Logout
+            </button>
+          </a>
+          {% if session.get('is_login') %} {% else %}
+          <a href="/login" class="ml-20" alt="profile_logo" srcset="">
+            <button class="bg-black text-white px-4 py-2 rounded">
+              Sign In
+            </button>
+          </a>
+          <a href="/register" class="mx-4" alt="profile_logo" srcset="">
+            <button class="bg-white text-black px-4 py-2 rounded">
+              Sign Up
+            </button>
+          </a>
+
+          {% endif %}
+        </div>
+      </nav>
+
+      <div
+        class="w-full h-[85%] flex items-center justify-center bg-[#2596be] bg-opacity-60"
+        id="block"
+      >
+        <div class="w-[85%] h-[85%] bg-[#add6dc] rounded rounded-lg">
+          <h1 class="text-5xl font-semibold mt-2 mx-2">Patient Record List</h1>
+
+          <div class="h-12 w-full flex justify-end items-center">
+            <a
+              href="/records/addPatient"
+              class="p-2 px-2 mr-4 bg-gray-100 rounded rounded-lg"
+              >Add Patient</a
+            >
+          </div>
+          <table class="mt-8 w-full">
+            <thead>
+              <tr class="">
+                <th class="px-4 py-2">Patient Id</th>
+                <th class="px-4 py-2">Patient Name</th>
+                <th class="px-4 py-2">Date of First Admission</th>
+                <th class="px-4 py-2">Action</th>
+              </tr>
+            </thead>
+
+            <tbody class="w-full">
+              {% for item in records %}
+
+              <tr class="h-20 border-b border-black">
+                {% for field in item %}
+
+                <td class="w-1/4 text-center">{{field}}</td>
+
+                {% endfor %}
+                <td class="text-center space-x-2 cursor-pointer">
+                  <a
+                    href="/records/editPatient/{{item[0]}}"
+                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded rounded-lg"
+                  >
+                    Update
+                  </a>
+                  <a
+                    href="/records/deletePatient/{{item[0]}}"
+                    class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded rounded-lg"
+                  >
+                    Delete
+                  </a>
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

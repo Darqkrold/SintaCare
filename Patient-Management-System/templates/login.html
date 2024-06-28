@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="h-screen w-full flex">
+      <div
+        class="h-full w-1/2 border border-black"
+        style="
+          background-image: url('static/c2.png');
+          background-size: cover;
+          background-position: center;
+        "
+      ></div>
+      <form
+        class="h-full w-1/2 border border-black bg-blue-300 flex items-center justify-center"
+        method="POST"
+      >
+        <div class="w-[80%] h-[85%]">
+          <div class="h-1/4 w-full flex items-center justify-center">
+            <h1 class="font-bold text-2xl">Login</h1>
+          </div>
+
+          <h1 class="font-semibold text-xl ml-4">Email</h1>
+
+          <div class="w-full flex justify-center">
+            <input
+              type="text"
+              class="w-[95%] rounded rounded-lg mb-4"
+              name="email"
+              id=""
+            />
+          </div>
+
+          <h1 class="font-semibold text-xl ml-4">Password</h1>
+          <div class="flex justify-center w-full">
+            <input
+              type="password"
+              class="w-[95%] rounded rounded-lg mb-4"
+              name="password"
+              id="password"
+            />
+          </div>
+
+          <div class="w-full flex flex-col items-end">
+            <button
+              type="submit"
+              class="bg-white rounded rounded-lg p-2 px-5 mr-4"
+            >
+              Login
+            </button>
+            <h1 class="text-red-400 mr-4">Forgot Password?</h1>
+          </div>
+
+          <div class="w-full flex flex-col h-[40%] justify-end">
+            <h1>Not Registered Yet? <a href="/register"> Register Here </a></h1>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

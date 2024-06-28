@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="h-screen w-full flex">
+      <div class="h-full w-1/2 flex items-center justify-center">
+        <img src="/static/clientLogo.png" alt="" srcset="" />
+      </div>
+      <form
+        class="h-full w-1/2 bg-blue-300 flex items-center justify-center"
+        method="POST"
+      >
+        <div class="w-[80%] h-[85%] bg-blue-400">
+          <div class="h-1/4 w-full flex items-center justify-center">
+            <h1 class="font-bold text-2xl">Register</h1>
+          </div>
+
+          <div class="w-full flex">
+            <span class="w-1/2">
+              <h1 class="font-semibold text-xl ml-4">Email</h1>
+
+              <div class="w-full flex justify-center">
+                <input
+                  type="text"
+                  class="w-[95%] h-8 rounded rounded-lg mb-4"
+                  name="email"
+                  id=""
+                />
+              </div>
+            </span>
+
+            <span class="w-1/2">
+              <h1 class="font-semibold text-xl ml-4">Full Name</h1>
+
+              <div class="flex justify-center w-full">
+                <input
+                  type="text"
+                  class="w-[95%] h-8 rounded rounded-lg mb-4"
+                  name="fullname"
+                  id=""
+                />
+              </div>
+            </span>
+          </div>
+
+          <div class="w-full flex">
+            <span class="w-1/2">
+              <h1 class="font-semibold text-xl ml-4">Password</h1>
+
+              <div class="w-full flex justify-center">
+                <input
+                  type="password"
+                  class="w-[95%] h-8 rounded rounded-lg mb-4"
+                  name="password"
+                  id=""
+                />
+              </div>
+            </span>
+
+            <!-- 
+                div h screen wfull 
+
+                div w 1/2 h 1/2 
+                        
+
+            
+            -->
+
+            <span class="w-1/2">
+              <h1 class="font-semibold text-xl ml-4">Password Confirmation</h1>
+
+              <div class="flex justify-center w-full">
+                <input
+                  type="password"
+                  class="w-[95%] h-8 rounded rounded-lg mb-4"
+                  name="confirm_password"
+                  id=""
+                />
+              </div>
+            </span>
+          </div>
+
+          <div class="w-full flex flex-col items-end">
+            <button
+              type="submit"
+              class="bg-white rounded rounded-lg p-2 px-5 mr-4"
+            >
+              Register
+            </button>
+          </div>
+
+          <div class="w-full flex flex-col h-[40%] justify-end">
+            <h1>Already have an account? <a href="/login"> Login Here </a></h1>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
