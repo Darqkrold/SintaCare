@@ -13,8 +13,8 @@ This system is a web-based application designed to manage patient records. It al
 
 ## Technology Stack
 
-- **Frontend:** HTML (with Django templating for dynamic content rendering)
-- **Backend:** Flask (Python web framework)
+- **Frontend:** HTML 
+- **Backend:** Flask 
 - **Database:** SQLite
 
 ## Installation
@@ -26,7 +26,6 @@ To run this application, you need Python installed on your system. If you don't 
 Clone the repository to your local machine:
 
 ```sh
-git clone <https://github.com/DefinitelyNotAnAssassin/Flask-Patient-Management-System 
->
+git clone <https://github.com/DefinitelyNotAnAssassin/Flask-Patient-Management-System>
 cd <Flask-Patient-Management-System >
 ```"# SintaCare" 
